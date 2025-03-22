@@ -24,7 +24,7 @@ function UpdateEmployee() {
     console.log(empdata);
     let updateEmployee =async  (e) => {
         e.preventDefault();
-        let sentData=await axios.put(`http://localhost:4500/api/student/updateStudent/${localStorage.getItem("eid")}`,empdata);
+        let sentData=await axios.put(`https://mern-crud-fwpp.vercel.app/api/student/updateStudent/${localStorage.getItem("eid")}`,empdata);
         console.log(sentData)
     }
     return (
