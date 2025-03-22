@@ -5,6 +5,7 @@ import "../index.css"
 
 function SingleEmployee() {
 let [empdata,setempdata]=useState({})
+  axios.defaults.withCredentials = true
   let {eid}=useParams();
 console.log(eid);
   let getEmpData=async ()=>
