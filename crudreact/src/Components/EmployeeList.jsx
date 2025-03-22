@@ -10,7 +10,7 @@ function EmployeeList() {
 
   let getemps=async ()=>
   {
-    let {data}=await axios.get("http://localhost:4500/api/students/getStudents");
+    let {data}=await axios.get("https://mern-crud-fwpp.vercel.app/api/students/getStudents");
     console.log(data)
     setemplist(data)
   }
