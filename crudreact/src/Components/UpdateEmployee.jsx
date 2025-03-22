@@ -5,7 +5,7 @@ function UpdateEmployee() {
 
     let getEmpData=async ()=>
     {
-      let {data}=await axios.get(`http://localhost:4500/api/students/getSingleStudent/${localStorage.getItem("eid")}`);
+      let {data}=await axios.get(`https://mern-crud-fwpp.vercel.app/api/students/getSingleStudent/${localStorage.getItem("eid")}`);
       console.log(localStorage.getItem("eid"));
       setempdata(data.data)
       console.log(data.data);
