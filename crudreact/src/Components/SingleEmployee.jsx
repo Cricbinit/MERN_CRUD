@@ -9,7 +9,7 @@ let [empdata,setempdata]=useState({})
 console.log(eid);
   let getEmpData=async ()=>
   {
-    let {data}=await axios.get(`http://localhost:4500/api/students/getSingleStudent/${eid}`);
+    let {data}=await axios.get(`https://mern-crud-fwpp.vercel.app/api/students/getSingleStudent/${eid}`);
     console.log(data);
     setempdata(data)
   }
