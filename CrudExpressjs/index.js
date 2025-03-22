@@ -38,9 +38,16 @@ let app = express()
 // ADD THIS
 var cors = require('cors');
 // console.log(cors);
-app.use(cors());
+app.use(cors(
+    {
+      origin:[""],
+      methods:["POST", "GET"],
+      credentials:true
+    }
+));
 app.use(express.json())
 app.use('/api/students', studentRoutes)
+
 app.use("*", (req, res)=>{
     res.json({error:true, message:"page not found"})
 })
