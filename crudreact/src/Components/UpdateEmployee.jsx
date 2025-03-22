@@ -3,6 +3,8 @@ import axios from "axios"
 function UpdateEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
 
+    axios.defaults.withCredentials = true
+
     let getEmpData=async ()=>
     {
       let {data}=await axios.get(`https://mern-crud-fwpp.vercel.app/api/students/getSingleStudent/${localStorage.getItem("eid")}`);
