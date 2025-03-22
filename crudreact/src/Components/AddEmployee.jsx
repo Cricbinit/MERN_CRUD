@@ -10,7 +10,7 @@ function AddEmployee() {
     }
     let addEmployee =async  (e) => {
           e.preventDefault();
-        let sentData=await axios.post("mern-crud-fwpp.vercel.app/api/students/addstudent",empdata);
+        let sentData=await axios.post("https://mern-crud-fwpp.vercel.app/api/students/addstudent",empdata);
         setempdata({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" })
         console.log(sentData)
     }
