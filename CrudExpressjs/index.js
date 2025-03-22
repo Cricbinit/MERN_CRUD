@@ -40,7 +40,7 @@ var cors = require('cors');
 // console.log(cors);
 app.use(cors(
     {
-      origin:["mern-crud-fwpp.vercel.app"],
+      origin:[""],
       methods:["POST", "GET"],
       credentials:true
     }
