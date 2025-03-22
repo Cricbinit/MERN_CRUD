@@ -35,7 +35,7 @@ function EmployeeList() {
 
     let deleteEmployee=async (eid)=>
     {
-        await axios.delete(`http://localhost:4500/api/students/deleteStudent/${eid}`)
+        await axios.delete(`https://mern-crud-fwpp.vercel.app/api/students/deleteStudent/${eid}`)
         getemps()
     }
 
