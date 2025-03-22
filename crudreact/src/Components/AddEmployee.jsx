@@ -4,6 +4,7 @@ import axios from "axios"
 
 function AddEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
+    axios.defaults.withCredentials = true
     let updateEmpData = ({ target: { name, value } }) => {
         setempdata({ ...empdata, [name]: value })
     }
