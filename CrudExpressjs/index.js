@@ -42,6 +42,7 @@ app.use(cors(
     {
       origin:["https://mern-crud-frontend-wheat.vercel.app/"],
       methods:["POST", "GET"],
+      allowedHeaders: 'Content-Type,Authorization',
       credentials:true
     }
 ));
