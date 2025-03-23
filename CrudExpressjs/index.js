@@ -38,14 +38,7 @@ let app = express()
 // ADD THIS
 var cors = require('cors');
 // console.log(cors);
-app.use(cors(
-    {
-      origin:["https://mern-crud-frontend-wheat.vercel.app/"],
-      methods:["POST", "GET"],
-      allowedHeaders: 'Content-Type,Authorization',
-      credentials:true
-    }
-));
+app.use(cors());
 app.use(express.json())
 app.get("/", (req, res) => { res.send("Express on Vercel"); });
 app.use('/api/students', studentRoutes)
