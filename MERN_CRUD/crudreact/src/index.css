@@ -1,0 +1,32 @@
+  
+  .mainCardsContainer{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 210, 210);
+    height: 85vh;
+  }
+  
+  
+  
+  
+  .cards{
+    /* border: 2px solid red; */
+    width: 450px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(235, 232, 232);
+    /* color: white; */
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
