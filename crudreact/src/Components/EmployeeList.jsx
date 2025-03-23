@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 import axios  from 'axios';
 
 function EmployeeList() {
-
+  const BASE_URL = 'https://localhost:4500';
   let [emplist,setemplist]=useState([]);
 
   let navigate=useNavigate()
@@ -11,7 +11,7 @@ function EmployeeList() {
 
   let getemps=async ()=>
   {
-    let {data}=await axios.get("https://mern-crud-fwpp.vercel.app/api/students/getStudents");
+    let {data}=await axios.get(`${BASE_URL}/api/students/getStudents`);
     console.log(data)
     setemplist(data)
   }
@@ -36,7 +36,7 @@ function EmployeeList() {
 
     let deleteEmployee=async (eid)=>
     {
-        await axios.delete(`https://mern-crud-fwpp.vercel.app/api/students/deleteStudent/${eid}`)
+        await axios.delete(`${BASE_URL}/api/students/deleteStudent/${eid}`)
         getemps()
     }
 

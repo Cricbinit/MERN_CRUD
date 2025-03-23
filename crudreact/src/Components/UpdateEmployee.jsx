@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 function UpdateEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
-
+    const BASE_URL = 'https://localhost:4500';
     axios.defaults.withCredentials = true
 
     let getEmpData=async ()=>
     {
-      let {data}=await axios.get(`https://mern-crud-fwpp.vercel.app/api/students/getSingleStudent/${localStorage.getItem("eid")}`);
+      let {data}=await axios.get(`${BASE_URL}/api/students/getSingleStudent/${localStorage.getItem("eid")}`);
       console.log(localStorage.getItem("eid"));
       setempdata(data.data)
       console.log(data.data);
@@ -26,7 +26,7 @@ function UpdateEmployee() {
     console.log(empdata);
     let updateEmployee =async  (e) => {
         e.preventDefault();
-        let sentData=await axios.put(`https://mern-crud-fwpp.vercel.app/api/student/updateStudent/${localStorage.getItem("eid")}`,empdata);
+        let sentData=await axios.put(`${BASE_URL}/api/student/updateStudent/${localStorage.getItem("eid")}`,empdata);
         console.log(sentData)
     }
     return (

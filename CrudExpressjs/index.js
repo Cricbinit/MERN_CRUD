@@ -38,9 +38,18 @@ let app = express()
 // ADD THIS
 var cors = require('cors');
 // console.log(cors);
-app.use(cors());
+app.use(cors(
+    {
+      origin:["http://localhost:4500"],
+      methods:["POST", "GET", "PUT", "DELETE"],
+      allowedHeaders: 'Content-Type,Authorization',
+      credentials:true
+    }
+));
 app.use(express.json())
-app.get("/", (req, res) => { res.send("Express on Vercel"); });
+app.get("/", (req, res) => {
+    res.send("Server deployed and running on vercel.");
+  });
 app.use('/api/students', studentRoutes)
 
 app.use("*", (req, res)=>{
