@@ -4,13 +4,14 @@ import axios from "axios"
 
 function AddEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
-    axios.defaults.withCredentials = true
+    // axios.defaults.withCredentials = true
+    axios.defaults.withCredentials = true;
     let updateEmpData = ({ target: { name, value } }) => {
         setempdata({ ...empdata, [name]: value })
     }
     let addEmployee =async  (e) => {
           e.preventDefault();
-        let sentData=await axios.post("https://mern-crud-fwpp.vercel.app/api/students/addstudent",empdata);
+        let sentData=await axios.post("http://localhost:4500/api/students/addstudent",empdata);
         setempdata({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" })
         console.log(sentData)
     }
