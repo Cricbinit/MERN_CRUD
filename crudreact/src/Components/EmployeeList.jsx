@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 import axios  from 'axios';
 
 function EmployeeList() {
-  const BASE_URL = 'https://localhost:4500';
+   const BASE_URL = 'https://mern-crud-pearl.vercel.app'
   let [emplist,setemplist]=useState([]);
 
   let navigate=useNavigate()

@@ -5,7 +5,7 @@ import "../index.css"
 
 function SingleEmployee() {
 let [empdata,setempdata]=useState({})
-const BASE_URL = 'https://localhost:4500';
+  const BASE_URL = 'https://mern-crud-pearl.vercel.app'
 
   axios.defaults.withCredentials = true
   let {eid}=useParams();

@@ -6,7 +6,7 @@ function AddEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
     // axios.defaults.withCredentials = true
     axios.defaults.withCredentials = true;
-    const BASE_URL = 'https://localhost:4500';
+    const BASE_URL = 'https://mern-crud-pearl.vercel.app';
     let updateEmpData = ({ target: { name, value } }) => {
         setempdata({ ...empdata, [name]: value })
     }

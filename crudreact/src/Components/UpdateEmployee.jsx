@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 function UpdateEmployee() {
     let [empdata, setempdata] = useState({ fn: "", ln: "", email: "", gender: "", mob: "", add: "", age: "" });
-    const BASE_URL = 'https://localhost:4500';
+   const BASE_URL = 'https://mern-crud-pearl.vercel.app'
     axios.defaults.withCredentials = true
 
     let getEmpData=async ()=>
