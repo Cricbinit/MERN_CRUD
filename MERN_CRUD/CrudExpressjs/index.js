@@ -40,7 +40,7 @@ var cors = require('cors');
 // console.log(cors);
 app.use(cors(
     {
-      origin:["http://localhost:4500"],
+      origin:["http://35.173.128.186:4500"],
       methods:["POST", "GET", "PUT", "DELETE"],
       allowedHeaders: 'Content-Type,Authorization',
       credentials:true
@@ -66,7 +66,7 @@ let startServer = async()=>{
         await connectDataBase(process.env.PORT)
         console.log("mongoDB connected successfully");
         app.listen(4500, (err)=>{
-console.log("server is running at port : http://localhost:4500");
+console.log("server is running at port : http://35.173.128.186:4500");
         })
     } catch (error) {
         console.log(error);
