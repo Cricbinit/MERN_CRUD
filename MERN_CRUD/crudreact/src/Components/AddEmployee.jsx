@@ -7,7 +7,7 @@ function AddEmployee() {
     // axios.defaults.withCredentials = true
     axios.defaults.withCredentials = true;
     
-    const BASE_URL = 'https://mern-crud-pearl.vercel.app';
+    const BASE_URL = 'https://35.173.128.186';
     let updateEmpData = ({ target: { name, value } }) => {
         setempdata({ ...empdata, [name]: value })
     }

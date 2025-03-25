@@ -69,5 +69,4 @@ function AddEmployee() {
         </form>
     )
 }
-
 export default AddEmployee
