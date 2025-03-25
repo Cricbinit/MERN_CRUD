@@ -5,11 +5,14 @@ import "../index.css"
 
 function SingleEmployee() {
 let [empdata,setempdata]=useState({})
+  const BASE_URL = 'https://mern-crud-pearl.vercel.app'
+
+  axios.defaults.withCredentials = true
   let {eid}=useParams();
 console.log(eid);
   let getEmpData=async ()=>
   {
-    let {data}=await axios.get(`http://localhost:4500/api/students/getSingleStudent/${eid}`);
+    let {data}=await axios.get(`${BASE_URL}/api/students/getSingleStudent/${eid}`);
     console.log(data);
     setempdata(data)
   }
